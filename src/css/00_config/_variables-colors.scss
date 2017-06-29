@@ -1,0 +1,28 @@
+// Config : Colors variables
+// =========================
+//
+
+// Debug
+// ------
+// background color debugging ftw
+$p : peachpuff !default;
+$r : rebeccapurple !default;
+$l : lightgreen !default;
+
+// Colors list
+// -----------
+// List all colors right here
+// Variables named using "Name that color" (http://chir.ag/projects/name-that-color/)
+$white        : #fff !default;
+$black        : #000 !default;
+$purpleheart  : #6717c1 !default;
+$pictonblue   : #50adf6 !default;
+$orange       : #ff5722 !default;
+$sushi        : #8bc34a !default;
+
+// Layout color
+// ------------
+// Put the colors listed in use
+// /!\ Don't use color name for your variables here
+$body-bg      : $white;
+$text-color   : $black;

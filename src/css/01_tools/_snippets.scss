@@ -1,0 +1,50 @@
+// Tools : Snippets
+// ================
+// 
+
+// Accessibilité 
+// -------------
+// Masquer le contenu de façon accessible :
+.#{$class-prefix}-sr-only, %#{$class-prefix}-sr-only, .sr-only  {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+// No JS
+@mixin no-js {
+  .#{$class-no-js} & {
+    @content;
+  }
+}
+
+// Responsive : gestion des affichages
+// -----------------------------------
+// Seulement sur mobile
+.mobileOnly {
+  @media screen and (min-width: $smallscreen-layout) {
+    display: none !important;
+  }
+}
+// Seulement sur desktop
+.desktopOnly {
+  @media screen and (max-width: $smallscreen-layout) {
+    display: none !important;
+  }
+}
+
+// Classes utilitaires, shortcuts
+// ------------------------------
+// Clearfix
+.sc-clearfix { clear: both; }
+// Nowrap
+.nowrap { white-space: nowrap; }
+// Text-align
+.txt-align-right { text-align: right !important; }
+.txt-align-left { text-align: left !important; }
+.txt-align-center { text-align: center !important; }

@@ -1,0 +1,17 @@
+// Organisms : Main
+// ================
+
+// Body
+// ----
+body {
+  @include font-smoothing(on);
+  font-family: $base-face;
+  font-size: $base-font_size;
+  line-height: $base-line_height;
+  background-color: $body-bg;
+  color: $text-color;
+  position: relative;
+  @include mobileLayout {
+    font-size: $mobile-font_size;
+  }
+}

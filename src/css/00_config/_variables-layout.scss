@@ -1,0 +1,30 @@
+// Config : Layout variables
+// =========================
+//
+
+// Class prefix
+// -------------
+$class-prefix: ca !default;
+
+// Typography
+// ----------
+// Base
+$base-face            : Helvetica, Arial, "Trebuchet MS", sans-serif !default;
+$serif-face           : Georgia, "Times New Roman", serif !default;
+$base-font_size       : 14px !default;
+$mobile-font_size     : 14px !default;
+$base-line_height     : 1.5  !default;
+// Webfonts
+$webfont              : Helvetica, $base-face !default;
+
+// Layout variables
+// ----------------
+$site-width            : 100% !default;
+$restrained-width      : 1000px !default;
+
+// Z-index directory
+// ------------------
+// Ranked in order of importance
+$zindex-header: 3 !default;
+$zindex-nav: 2 !default;
+$zindex-content: 1 !default;

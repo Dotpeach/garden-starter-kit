@@ -1,62 +1,62 @@
 @charset "UTF-8";
-// Ajouter vos style SCSS ici
-// --------------------------
 
-/// Générez un guide des styles
-//
-// Si vous commentez votre code en utilisant la syntaxe
-// [KSS](https://github.com/kss-node/kss/blob/spec/SPEC.md),
-// le Starter Kit generera un guide des styles dans la
-// documentation a chaque build du projet.
-//
-// Styleguide Introduction
+// Main partials import
+// ====================
+// /!\ Don't put styles in here
 
-/// Une palette de couleur
-//
-// Si vous voulez documenter des couleurs, vous pouvez
-// le faire de cette manière grace au block Colors.
-//
-// Colors:
-// denim          : #1e5bc6
-// flamingo       : #f15145
-// alert          : #f33121 - red for error
-// $color-black   : #000    - real black
-//
-// Styleguide Introduction.Couleur
+// Necessary tools (needed in config)
+// ----------------
+// CSS Reset
+@import "01_tools/normalize";
+// Mixins
+@import "01_tools/mixins";
+// Em converter
+@import "01_tools/em-converter";
+// Rem converter
+@import "01_tools/rem-converter";
 
-/// Font d’icon Fontello
-//
-// De la même façon que pour les fonts grâce au block
-// Icons vous pouvez documenter les icons de la font.
-//
-// Implique que la font d’icon se nomme fontello
-// Sinon il faut changer celle-ci dans doc.scss
-//
-// Icons:
-// left    : ←
-// up      : ↑
-// right   : →
-// down    : ↓
-// comment : 💬 - bulle
-//
-// Styleguide Introduction.Icons
+// Theme config
+// ------------
+// Global, variables, config elements
+@import "00_config/variables-colors";
+@import "00_config/variables-layout";
+@import "00_config/mediaqueries";
+@import "00_config/webfonts";
 
-/// Exemple UI
-//
-// Markup: ../html/partials/_exemple.twig
-//
-// Styleguide Introduction.UI
+// Tools, snippets (config needed)
+// ---------------
+// Defaults mixin and functions, fonts and icons utilities
+@import "01_tools/snippets";
+@import "01_tools/sprites";
+@import "01_tools/font-icon";
 
-/// SVG
-//
-// Markup:
-// <svg style="height:120px;width:120px;fill:#000">
-//   <use xlink:href="#symbol-fish"/>
-// </svg>
-//
-// Styleguide Introduction.Svg
+// -------------------------------//
+// ATOMIC DESIGN FILES STRUCTURE  //
+// -------------------------------//
+// Learn more on : http://bradfrost.com/blog/post/atomic-web-design/
+// -------------------------------//
+// Atoms
+// -----
+// Single elements, html tags
+@import "02_atoms/**";
 
-body {
-  font: 1em sans-serif;
-  background: url('../img/clever-age-logo.png') no-repeat top right;
-}
+// Molecules
+// ---------
+// Atoms combined
+@import "03_molecules/**";
+
+// Organisms
+// ---------
+// Molecules combined / Building blocks and structures with molecules
+@import "04_organisms/**";
+
+// Layout
+// ------
+// Templates / Layout specific themes (header, footer…)
+@import "05_layout/**";
+
+// Overrides
+// ---------
+// Overrides, specific styles for special pages or contexte
+// (should be empty, it's a last resort folder !)
+@import "06_overrides/**";
